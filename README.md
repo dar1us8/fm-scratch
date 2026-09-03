@@ -12,6 +12,17 @@ This is a public scratch repository with no product code. It exists so an AI age
 - Pull requests are merged only with the repository owner's explicit approval.
 - The repository may be reset or discarded at any time.
 
+## Tools
+
+- `firstmate` - the coordinating agent that registers projects, dispatches workers into isolated worktrees, and supervises their work.
+- `no-mistakes` - the automated validation pipeline that runs code review, tests, lint, and docs checks, then pushes and opens the pull request.
+- `tasks-axi` - the fleet's task backlog: queued work, dependencies, holds, and completion history.
+- `gh-axi` - GitHub operations such as pull requests, issues, and CI runs through an agent-friendly wrapper.
+- `chrome-devtools-axi` - browser control for visual checks and web-based verification.
+- `lavish-axi` - turns HTML artifacts into review surfaces the repository owner can annotate and send feedback on.
+- `quota-axi` - reports model and provider quota so dispatch decisions account for remaining capacity.
+- `markdownlint-cli2` - the Markdown linter the CI workflow runs on every pull request.
+
 ## Continuous integration
 
 Every pull request runs the CI workflow in `.github/workflows/ci.yml`, which lints all Markdown files. It exists so the fleet's validation pipeline has a real check to wait on before a pull request can be merged.
