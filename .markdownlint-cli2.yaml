@@ -1,3 +1,7 @@
 # The README uses long paragraph lines on purpose; do not enforce line length.
+# CLAUDE.md is a two-line @AGENTS.md pointer, not a document.
 config:
   MD013: false
+ignores:
+  - CLAUDE.md
+  - node_modules

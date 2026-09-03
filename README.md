@@ -25,4 +25,4 @@ This is a public scratch repository with no product code. It exists so an AI age
 
 ## Continuous integration
 
-Every pull request runs the CI workflow in `.github/workflows/ci.yml`, which lints all Markdown files. It exists so the fleet's validation pipeline has a real check to wait on before a pull request can be merged.
+Every pull request runs the CI workflow in `.github/workflows/ci.yml`, which lints every Markdown file not listed under `ignores` in `.markdownlint-cli2.yaml`. It exists so the fleet's validation pipeline has a real check to wait on before a pull request can be merged.
