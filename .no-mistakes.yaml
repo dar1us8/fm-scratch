@@ -1,0 +1,25 @@
+# Seeded by ancilli-install. Gate-control fields (commands, review.path_instructions,
+# document.instructions) are read from the default branch only: merge this file to
+# main before expecting the pipeline to honour it.
+commands:
+  test: "sh gates/run.sh"
+review:
+  path_instructions:
+    - path: "gates/**"
+      instructions: |
+        Gate scripts are written only by the validator step. If this change edits
+        an existing gate while also implementing the ticket it gates, report an
+        error finding: the builder may not weaken its own acceptance gate.
+    - path: "**"
+      instructions: |
+        Spec axis. Fetch the spec and ticket named in the intent. Report, under a
+        heading "Spec", each of: (a) requirements the spec asks for that are
+        missing or partial, (b) behaviour in the diff the spec did not ask for,
+        (c) requirements that look implemented but wrong. Quote the spec line for
+        each. Keep these findings separate from standards findings; never rerank
+        across the two.
+document:
+  instructions: |
+    CONTEXT.md owns domain vocabulary. docs/adr/ owns decisions and their reasons.
+    AGENTS.md owns facts an agent needs to operate this repo. README.md owns what
+    a user needs. Every fact has one owner; elsewhere, link to it.
