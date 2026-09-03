@@ -11,3 +11,7 @@ This is a public scratch repository with no product code. It exists so an AI age
 - Every change goes through an automated validation pipeline covering code review, tests, lint, and docs before a pull request is opened.
 - Pull requests are merged only with the repository owner's explicit approval.
 - The repository may be reset or discarded at any time.
+
+## Continuous integration
+
+Every pull request runs the CI workflow in `.github/workflows/ci.yml`, which lints all Markdown files. It exists so the fleet's validation pipeline has a real check to wait on before a pull request can be merged.

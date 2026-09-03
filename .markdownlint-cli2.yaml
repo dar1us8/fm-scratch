@@ -1,0 +1,3 @@
+# The README uses long paragraph lines on purpose; do not enforce line length.
+config:
+  MD013: false
