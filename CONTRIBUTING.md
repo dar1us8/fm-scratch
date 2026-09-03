@@ -13,5 +13,5 @@ Three tools carry a change from ticket to merged pull request. The README's Tool
 ## Ground rules
 
 - Never push to the default branch and never merge a pull request yourself. Pull requests are merged only with the repository owner's explicit approval.
-- Every Markdown file must pass the CI workflow's Markdown lint, configured in `.markdownlint-cli2.yaml`.
+- Every Markdown file not listed under ignores in .markdownlint-cli2.yaml must pass the CI workflow's Markdown lint.
 - The repository may be reset or discarded at any time, so do not rely on anything here persisting.
